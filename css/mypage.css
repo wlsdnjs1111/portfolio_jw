@@ -1,0 +1,407 @@
+@font-face {
+  font-family: 'MangoDdobak-B';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-B.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RixInooAriDuriR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+li{
+  list-style: none;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+body{
+  background-color: #FFF8F0;
+  color: #444;
+  font-family: "pretandard";
+  position: relative;
+}
+h1,h2{
+  font-family: 'RixInooAriDuriR';
+  font-weight: 400;
+}
+
+/* 헤더영역 */
+header{
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .h_top{
+  width: 100%;
+  height: 100px;
+  padding-left: 100px;
+  border-bottom: 1px solid #fff;
+}
+header .h_top a{
+  display: block;
+  width: 500px;
+  height: 100px;
+  margin: auto;
+}
+header .h_bottom{
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #fff;
+}
+header .h_bottom .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header .h_bottom .search form {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #FFA500;
+  border-radius: 50px;
+  background-color: #fff;
+  overflow: hidden;
+  height: 45px;
+}
+
+.search input[type="search"] {
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  font-size: 16px;
+  width: 470px;
+}
+
+header .h_bottom .search button {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  border: none;
+  background: none;
+  padding: 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .h_bottom .search button img {
+  width: 25px;
+  height: 25px;
+}
+header .h_bottom nav{
+width: 100%;
+height: 100%;
+}
+header .h_bottom nav ul{
+width:80%;
+height: 100%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* background-color: yellow; */
+}
+header .h_bottom nav ul li a{
+display: block;
+width: 100px;
+height: 60px;
+line-height: 60px;
+text-align: center;
+align-content: center;
+font-family: 'MangoDdobak-B';
+font-size: 1.2em;
+font-weight: bold;
+color: #333;
+transition: 0.3s ease;
+text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+header .h_bottom nav ul li a>img{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    line-height: 60px;
+}
+header .h_bottom nav li a{
+transition: 0.3s ease;
+}
+header .h_bottom nav ul li:hover{
+transform: translateY(-5px);
+}
+
+/* section01(프로필카드) */
+.profile{
+  width: 100%;
+  height: 100vh;
+  background: url(../img/mypage/bg.jpeg) no-repeat center / cover;
+  position: relative;
+}
+.profile .pro_inner{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  /* background-color: antiquewhite; */
+}
+.profile .pro_inner h2{
+  font-size: 4em;
+  margin-bottom: 30px;
+  padding-top: 230px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.profile .pro_inner hr{
+  margin: 30px 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.profile .pro_inner .card{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.438);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.card .card_top>img{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.card .card_top .txt>a{
+  display: block;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #00D0B4;
+  border-radius: 30px;
+  margin: 10px auto;
+  font-family: 'MangoDdobak-B';
+  transition: all 0.3s ease;
+}
+.card .card_top .txt>a:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card .card_top .txt>a:active{
+  transform: scale(0.98);
+}
+.card .card_top .txt>p{
+  margin: 10px 0;
+  font-family: 'MangoDdobak-B';
+}
+.card .card_top .txt>h3{
+  font-size: 2em;
+  font-family: 'MangoDdobak-B';
+}
+
+.card .card_bottom ul li a>img{
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.card .card_bottom ul li a{
+  display: block;
+  height: 100%;
+  font-family: 'MangoDdobak-B';
+}
+.card .card_bottom ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* section02(정보) */
+.info{
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 100px;
+}
+.info .info_inner{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  padding-top: 100px;
+  /* background-color: #7cee8c; */
+}
+.info .info_inner h3{
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'MangoDdobak-B';
+}
+.info .info_inner .con{
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  /* background-color: #FFA500; */
+}
+.info .info_inner .con .imgbox{
+  position: relative;
+  /*background-color: #fff;*/
+  height: 300px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  /*border: 2px solid rgba(192, 192, 192, 0.877);*/
+  background: rgba(255, 255, 255, 0.822);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 20px rgba(245, 225, 225, 0.4);
+}
+.info .info_inner .con .imgbox>a{
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+.con .imgbox .imgitem{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+.imgbox .imgitem a>img{
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  transition: all 0.3 ease;
+  opacity: 0.8;
+}
+.imgbox .imgitem a>img:hover{
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+
+
+/* footer */
+footer{
+  width: 100%;
+  height: 450px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #666;
+}
+footer .f_inner{
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .f_inner .sns{
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+footer .f_inner .sns a:hover{
+  transform: translateY(-3px);
+}
+footer .f_inner .sns>a>img{
+  width: 40px;
+  height: 40px;
+}
+footer .f_inner .f_right h3{
+  color: #666;
+  font-size: 1.8em;
+  line-height: 1.4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+footer .f_inner .f_right p{
+  font-size: 1.2em;
+  margin: 20px 0;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.6;
+}
+footer .f_inner .f_right a,span{
+  font-size: 14px;
+  color: #666;
+
+}
+footer .f_inner .f_right a::after{
+  display: inline-block;
+  content: '';
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* side */
+aside{
+width: 60px;
+height: 220px;
+position: fixed;
+right: 0px;
+bottom: 50px;
+text-align: center;
+padding: 5px;
+/*background-color: #00D0B4; */
+}
+aside .pagebtn,
+aside .pagebtn .toppage{
+    margin-bottom: 5px;
+}
+aside .pagebtn>a{
+display: block;
+border: none;
+background:none;
+cursor: pointer;
+text-align: center;
+padding: 5px;
+transition: 0.3s ease;
+/*background-color: yellow;*/
+}
+aside>a{
+display: block;
+width: 100%;
+transition: 0.3s ease;
+/*background-color: red;*/
+}
+aside .pagebtn>a:hover,
+aside>a:hover{
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transform: translateY(-10%);
+}
+
+  @media screen and (max-width:1599px) {
+    #wrap{
+      min-width: 1599px;
+    }
+    } 
