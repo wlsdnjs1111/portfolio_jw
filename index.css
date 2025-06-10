@@ -224,6 +224,7 @@ header .title .bold{
 /* software skill */
 .skills{
   height: 1000px;
+  padding: 30px;
   /* background-color: blueviolet; */
 }
 .skills .skill_inner{
@@ -276,7 +277,6 @@ header .title .bold{
 }
 .project .p_txt{
   margin-bottom: 100px;
-  padding: 30px;
 }
 .project .p_txt h2{
   margin-bottom: 20px;
@@ -571,6 +571,7 @@ footer .f_bottom .left{
 footer .f_bottom .right p{
   font-size: 20px;
   margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 footer .f_bottom .right span{
   color: tomato;
