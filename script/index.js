@@ -78,42 +78,50 @@ $(function(){
   });
 
 //pro2,3,4
-if(window.innerWidth >= 1024){
-  gsap.timeline({
-    scrollTrigger:{
-    trigger:'.pro2',
-    start:'0% 90%',
-    end:'center 90%',
-    scrub:2,
-    //markers:true
-    }
-  })
-  .to('.project .pro2',{y: '-100px', duration:1, ease:'none'},0.2)
-
-  
-  gsap.timeline({
-    scrollTrigger:{
-    trigger:'.pro3',
-    start:'0% center',
-    end:'center 90%',
-    scrub:2,
-    //markers:true
-    }
-  })
-  .to('.project .pro3',{x: '-200px', duration:1, ease:'none'},0.2)
+ // pro2 애니메이션은 항상 실행 (기존 방식 유지)
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.pro2',
+    start: '0% 90%',
+    end: 'center 90%',
+    scrub: 2,
+    // markers: true
+  }
+})
+.to('.project .pro2', { y: '-100px', duration: 1, ease: 'none' }, 0.2);
 
 
-  gsap.timeline({
-    scrollTrigger:{
-    trigger:'.pro4',
-    start:'0% center',
-    end:'center 90%',
-    scrub:2,
-    //markers:true
-    }
-  })
-  .to('.project .pro4',{x: '200px', duration:1, ease:'none'},0.2)
-}
+// pro3, pro4는 데스크탑에서만 실행
+ScrollTrigger.matchMedia({
+  "(min-width: 1024px)": function () {
+
+    // pro3 애니메이션
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.pro3',
+        start: '0% center',
+        end: 'center 90%',
+        scrub: 2,
+        // markers: true
+      }
+    })
+    .to('.project .pro3', { x: '-200px', duration: 1, ease: 'none' }, 0.2);
+
+
+    // pro4 애니메이션
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.pro4',
+        start: '0% center',
+        end: 'center 90%',
+        scrub: 2,
+        // markers: true
+      }
+    })
+    .to('.project .pro4', { x: '200px', duration: 1, ease: 'none' }, 0.2);
+
+  }
+});
   // gsap.timeline({
   //   scrollTrigger:{
   //     trigger:'.pro1',
