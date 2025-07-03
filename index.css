@@ -596,7 +596,7 @@ footer .f_bottom .right span{
   line-height: 50px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:540px) {
 #wrap{
   width: 100%;
 }
@@ -624,11 +624,11 @@ main .about .intro{
   gap: 50px;
 }
 main .about .intro .about_img{
-  width: 45%;
+  width: 300px;
   height: 300px;
 }
 main .about .intro .txtbox{
-  width: 90%;
+  width: 500px;
   padding: 10px;
 }
 main .about .intro .txtbox p{
@@ -637,7 +637,7 @@ main .about .intro .txtbox p{
 
 
 main .timeline{
-  margin-top: 700px;
+  margin-top: 800px;
   height: fit-content;
 }
 main .timeline .time_title{
@@ -674,6 +674,10 @@ main .pic h3{
 main .pic .picbox ul li{
   margin-top: 230px;
 }
+main .pic .picbox ul li img{
+  width: 500px;
+  height: 400px;
+}
 
 
 main .skills{
@@ -687,7 +691,7 @@ main .skills .skill_inner{
   margin-top: 30px;
 }
 main .skills .skill_inner .item{
-  width: 25%;
+  width: 120px;
   height: 150px;
   padding: 10px;
 }
@@ -713,20 +717,20 @@ main .project .p_txt h3{
   font-size: 25px;
 }
 main .project .p_txt p{
-  font-size: 16px;
+  font-size: 15px;
 }
 main .project .pro1{
   perspective: 900px;
 }
 main .project .pro1 .p_item{
-  width: 90%;
+  width: 450px;
   padding: 10px 20px;
 }
 main .project .pro1 .p_item h2{
   font-size: 70px;
 }
 main .project .pro1 .p_item .img{
-  width: 90%;
+  width: 400px;
   height: 300px;
   margin: 10px 0;
   top: 100px;
@@ -750,7 +754,7 @@ main .project .pro2{
   margin-top: 150px;
 }
 main .project .pro2 .pro2_txt{
-  width: 90%;
+  width: 450px;
   height: 270px;
   text-align: center;
 }
@@ -762,7 +766,7 @@ main .project .pro2 .pro2_txt p{
   font-size: 18px;
 }
 main .project .pro2 .pro2_img{
-  width: 90%;
+  width: 450px;
   height: 350px;
 }
 
@@ -773,7 +777,7 @@ main .project .pro3{
   margin-top: 100px;
 }
 main .project .pro3 .pro3_txt{
-  width: 90%;
+  width: 450px;
   height: 250px;
   text-align: center;
 }
@@ -789,7 +793,7 @@ main .project .pro3 .pro3_txt a{
   transform: translateX(-50%);
 }
 main .project .pro3 .pro3_img{
-  width: 70%;
+  width: 450px;
   order: 2;
   height: 600px;
 }
@@ -813,7 +817,7 @@ main .project .pro4 .pro4_txt p{
   font-size: 18px;
 }
 main .project .pro4 .pro4_img{
-  width: 50%;
+  width: 450px;
   height: 800px;
 }
 
