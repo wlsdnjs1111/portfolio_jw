@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
@@ -596,8 +597,7 @@ footer .f_bottom .right span{
   line-height: 50px;
 }
 
-/*
-@media screen and (max-width:540px) {
+@media screen and (max-width:767px) {
 #wrap{
   width: 100%;
 }
@@ -625,11 +625,11 @@ main .about .intro{
   gap: 50px;
 }
 main .about .intro .about_img{
-  width: 300px;
+  width: 45%;
   height: 300px;
 }
 main .about .intro .txtbox{
-  width: 500px;
+  width: 90%;
   padding: 10px;
 }
 main .about .intro .txtbox p{
@@ -638,7 +638,7 @@ main .about .intro .txtbox p{
 
 
 main .timeline{
-  margin-top: 800px;
+  margin-top: 700px;
   height: fit-content;
 }
 main .timeline .time_title{
@@ -675,10 +675,6 @@ main .pic h3{
 main .pic .picbox ul li{
   margin-top: 230px;
 }
-main .pic .picbox ul li img{
-  width: 500px;
-  height: 400px;
-}
 
 
 main .skills{
@@ -692,7 +688,7 @@ main .skills .skill_inner{
   margin-top: 30px;
 }
 main .skills .skill_inner .item{
-  width: 120px;
+  width: 25%;
   height: 150px;
   padding: 10px;
 }
@@ -718,20 +714,20 @@ main .project .p_txt h3{
   font-size: 25px;
 }
 main .project .p_txt p{
-  font-size: 15px;
+  font-size: 16px;
 }
 main .project .pro1{
   perspective: 900px;
 }
 main .project .pro1 .p_item{
-  width: 450px;
+  width: 90%;
   padding: 10px 20px;
 }
 main .project .pro1 .p_item h2{
   font-size: 70px;
 }
 main .project .pro1 .p_item .img{
-  width: 400px;
+  width: 90%;
   height: 300px;
   margin: 10px 0;
   top: 100px;
@@ -744,6 +740,7 @@ main .project .pro1 .p_item .ptxt{
   transform: translateX(-50%);
 }
 main .project .pro1 .pro1_btn ul{
+  /* margin-top: 50px; */
   justify-content: center;
   gap: 30px;
 }
@@ -754,7 +751,7 @@ main .project .pro2{
   margin-top: 150px;
 }
 main .project .pro2 .pro2_txt{
-  width: 450px;
+  width: 90%;
   height: 270px;
   text-align: center;
 }
@@ -766,7 +763,7 @@ main .project .pro2 .pro2_txt p{
   font-size: 18px;
 }
 main .project .pro2 .pro2_img{
-  width: 450px;
+  width: 90%;
   height: 350px;
 }
 
@@ -777,7 +774,7 @@ main .project .pro3{
   margin-top: 100px;
 }
 main .project .pro3 .pro3_txt{
-  width: 450px;
+  width: 90%;
   height: 250px;
   text-align: center;
 }
@@ -793,7 +790,7 @@ main .project .pro3 .pro3_txt a{
   transform: translateX(-50%);
 }
 main .project .pro3 .pro3_img{
-  width: 450px;
+  width: 70%;
   order: 2;
   height: 600px;
 }
@@ -802,6 +799,7 @@ main .project .pro3 .pro3_img{
 main .project .pro4{
   flex-direction: column;
   text-align: center;
+  /* margin-top: 100px; */
 }
 main .project .pro4 .pro4_txt{
   width: 90%;
@@ -816,12 +814,14 @@ main .project .pro4 .pro4_txt p{
   font-size: 18px;
 }
 main .project .pro4 .pro4_img{
-  width: 450px;
+  width: 50%;
   height: 800px;
 }
 
 
 footer{
+/* width: 100%;
+height: fit-content; */
 padding: 50px 0;
 }
 footer .textloop ul li{
@@ -841,5 +841,6 @@ footer .f_bottom .left h2{
   font-size: 60px;
   line-height: 1.2;
 }
-} 
-*/
+
+
+  } 
