@@ -78,6 +78,7 @@ $(function(){
   });
 
 //pro2,3,4
+if(window.innerWidth >= 1024){
   gsap.timeline({
     scrollTrigger:{
     trigger:'.pro2',
@@ -89,6 +90,7 @@ $(function(){
   })
   .to('.project .pro2',{y: '-100px', duration:1, ease:'none'},0.2)
 
+  
   gsap.timeline({
     scrollTrigger:{
     trigger:'.pro3',
@@ -100,6 +102,7 @@ $(function(){
   })
   .to('.project .pro3',{x: '-200px', duration:1, ease:'none'},0.2)
 
+
   gsap.timeline({
     scrollTrigger:{
     trigger:'.pro4',
@@ -110,7 +113,7 @@ $(function(){
     }
   })
   .to('.project .pro4',{x: '200px', duration:1, ease:'none'},0.2)
-
+}
   // gsap.timeline({
   //   scrollTrigger:{
   //     trigger:'.pro1',
