@@ -704,9 +704,10 @@ main .pic {
   margin: 50px 0;
   height: auto;
   padding: 10px;
+  overflow-x: hidden;
 }
 main .pic h2{
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1.4;
 }
 main .pic h3{
@@ -714,16 +715,16 @@ main .pic h3{
   font-size: 20px;
 }
 main .pic .picbox ul{
-    position: relative;
-    will-change: transform;
+position: relative;
+will-change: transform;
 }
 main .pic .picbox ul li{
 position: absolute;
-  top: calc(50% + 270px);
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(5deg); /* 예시 */
-  transition: transform 0.3s;
-  backface-visibility: hidden; /* 깜빡임 방지 */
+top: calc(50% + 270px);
+left: 50%;
+transform: translate(-50%, -50%) rotate(5deg); /* 예시 */
+transition: transform 0.3s;
+backface-visibility: hidden; /* 깜빡임 방지 */
 }
 main .pic .picbox ul li img{
 width: 90%;
