@@ -759,7 +759,7 @@ main .project .pro2{
   margin-top: 150px;
 }
 main .project .pro2 .pro2_txt{
-  width: 90%;
+  width: 500px;
   height: 270px;
   text-align: center;
 }
@@ -771,7 +771,7 @@ main .project .pro2 .pro2_txt p{
   font-size: 18px;
 }
 main .project .pro2 .pro2_img{
-  width: 90%;
+  width: 450px;
   height: 350px;
 }
 
@@ -782,7 +782,7 @@ main .project .pro3{
   margin-top: 100px;
 }
 main .project .pro3 .pro3_txt{
-  width: 90%;
+  width: 500px;
   height: 250px;
   text-align: center;
 }
@@ -798,7 +798,7 @@ main .project .pro3 .pro3_txt a{
   transform: translateX(-50%);
 }
 main .project .pro3 .pro3_img{
-  width: 70%;
+  width: 450px;
   order: 2;
   height: 600px;
 }
@@ -810,7 +810,7 @@ main .project .pro4{
   /* margin-top: 100px; */
 }
 main .project .pro4 .pro4_txt{
-  width: 90%;
+  width: 500px;
   height: 250px;
   text-align: center;
 }
@@ -822,7 +822,7 @@ main .project .pro4 .pro4_txt p{
   font-size: 18px;
 }
 main .project .pro4 .pro4_img{
-  width: 50%;
+  width: 450px;
   height: 800px;
 }
 
