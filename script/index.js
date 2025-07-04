@@ -31,6 +31,8 @@ $(function(){
 
 
   //타임라인
+ScrollTrigger.matchMedia({
+  "(min-width: 1024px)": function () {
   gsap.timeline({
     scrollTrigger:{
     trigger:'.timeline',
@@ -41,7 +43,8 @@ $(function(){
     }
   })
   .to('.timeline',{x: '100px', duration:1, ease:'none'},0.2)
-
+  }
+});
 
   //사진겹치기
     gsap.timeline({

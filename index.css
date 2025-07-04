@@ -630,11 +630,11 @@ main .about .intro{
   gap: 50px;
 }
 main .about .intro .about_img{
-  width: 45%;
+  width: 300px;
   height: 300px;
 }
 main .about .intro .txtbox{
-  width: 90%;
+  width: 450px;
   padding: 10px;
 }
 main .about .intro .txtbox p{
@@ -643,7 +643,6 @@ main .about .intro .txtbox p{
 
 
 main .timeline{
-  margin-top: 700px;
   height: fit-content;
 }
 main .timeline .time_title{
@@ -652,10 +651,11 @@ main .timeline .time_title{
 main .timeline .time_txt{
   border-top: 1px solid #666;
   flex-direction: column;
+  margin-top: 950px;
 }
 main .timeline .time_txt .txtbox{
   border-right: none;
-  width: 90%;
+  width: 400px;
   height: 220px;
   padding: 0 20px;
 }
