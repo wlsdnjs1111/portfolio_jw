@@ -17,10 +17,14 @@ max-width: 100%;
 display: block;
 }
 
-header, section{
+header{
   height: 100vh;
   color: #444;
   padding: 30px;
+}
+section{
+  min-height: 100vh;
+  height: auto;
 }
 h2{
   font-size: 100px;
@@ -93,6 +97,9 @@ header .title .bold{
 }
 
 /* intro */
+main .about{
+  padding: 30px;
+}
 .about .intro{
   /* background-color: aquamarine; */
   display: flex;
@@ -106,7 +113,7 @@ header .title .bold{
   box-shadow: 0 10px 40px rgba(0 , 0, 0, 0.4);
 }
 .about .intro .txtbox{
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   margin: auto;
 }
@@ -122,6 +129,7 @@ header .title .bold{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
   /*background-color: pink;*/
 }
 /* .timeline .time_title{
@@ -280,6 +288,7 @@ header .title .bold{
 .project{
   width: 100%;
   height: fit-content;
+  padding: 30px;
   /* background-color: plum;
   display: none; */
 }
@@ -637,6 +646,8 @@ main .about h2{
   line-height: 1;
 }
 main .about .intro{
+  margin-top: 0;
+  padding-top: 50px;
   flex-direction: column;
   gap: 50px; 
 }
@@ -654,16 +665,20 @@ main .about .intro .txtbox p{
 
 
 main .timeline{
+  flex-direction: column;
   height: fit-content;
+  margin-top: 80px;
+  padding-top: 30px;
+  position: relative;
 }
 main .timeline .time_title{
   display: none;
 }
 main .timeline .time_txt{
   border-top: 1px solid #666;
-  display: flex;
   flex-direction: column;
-  margin-top: 1100px;
+  margin-top: 0;
+  padding-top: 30px;
   max-width: 100%;
   width: 100%;
   gap: 20px;
@@ -673,7 +688,7 @@ main .timeline .time_txt .txtbox{
   border-right: none;
   width: 90%;
   max-width: 450px;
-  height: 220px;
+  /* height: 220px; */
   padding: 10px;
 }
 main .timeline .time_txt .txtbox:nth-child(1){
@@ -714,24 +729,24 @@ main .skills h2{
 }
 main .skills .skill_inner{
   width: 90%;
-  max-width: 450px;
+  max-width: 400px;
   margin-top: 30px;
   gap: 10px;
   justify-content: center;
 }
 main .skills .skill_inner .item{
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   padding: 10px;
 }
 main .skills .skill_inner .item p{
   font-size: 12px;
 }
 main .skills .skill_inner .item h3{
-  font-size: 30px;
+  font-size: 25px;
 }
 main .skills .skill_inner .item:nth-child(9) h4{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
