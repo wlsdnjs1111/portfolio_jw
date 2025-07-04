@@ -650,7 +650,7 @@ main .timeline .time_title{
 main .timeline .time_txt{
   border-top: 1px solid #666;
   flex-direction: column;
-  margin-top: 950px;
+  margin-top: 1000px;
 }
 main .timeline .time_txt .txtbox{
   border-right: none;
@@ -679,6 +679,10 @@ main .pic h3{
 }
 main .pic .picbox ul li{
   margin-top: 200px;
+}
+main .pic .picbox ul li img{
+  width: 500px;
+  height: 400px;
 }
 
 
@@ -727,7 +731,7 @@ main .project .pro1{
   perspective: 900px;
 }
 main .project .pro1 .p_item{
-  width: 90%;
+  width: 450px;
   padding: 10px 20px;
 }
 main .project .pro1 .p_item h2{
@@ -827,8 +831,7 @@ main .project .pro4 .pro4_img{
 
 
 footer{
-/* width: 100%;
-height: fit-content; */
+max-width: 100%;
 padding: 50px 0;
 }
 footer .textloop ul li{
