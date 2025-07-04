@@ -624,7 +624,10 @@ footer .f_bottom .right span{
 
 
 @media screen and (max-width:540px) {
-#wrap{
+body{
+  overflow-x: hidden;
+}
+  #wrap{
   width: 100%;
 }
 
