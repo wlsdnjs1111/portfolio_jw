@@ -81,6 +81,8 @@ ScrollTrigger.matchMedia({
   });
 
 //pro2,3,4
+ScrollTrigger.matchMedia({
+  "(min-width: 1024px)": function () {
 gsap.timeline({
   scrollTrigger: {
     trigger: '.pro2',
@@ -91,10 +93,6 @@ gsap.timeline({
   }
 })
 .to('.project .pro2', { y: '-100px', duration: 1, ease: 'none' }, 0.2);
-
-
-ScrollTrigger.matchMedia({
-  "(min-width: 1024px)": function () {
 
     // pro3 애니메이션
     gsap.timeline({

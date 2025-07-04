@@ -30,8 +30,6 @@ body{
   max-width: 100%;
   font-family: "Noto Sans", sans-serif;
   font-weight:weight;
-}
-body, html {
   overflow-x: hidden;
 }
 
@@ -627,30 +625,26 @@ header nav{
   display: none;
 }
 header .title h1{
-  font-size: 100px;
+  font-size: 90px;
 }
 header .title .bold{
   font-size: 150px;
 }
 
-
-main .about{
-  position: relative;
-}
 main .about h2{
   font-size: 60px;
   line-height: 1;
 }
 main .about .intro{
   flex-direction: column;
-  gap: 50px;
+  gap: 50px; 
 }
 main .about .intro .about_img{
   width: 300px;
   height: 300px;
 }
 main .about .intro .txtbox{
-  width: 450px;
+  width: 90%;
   padding: 10px;
 }
 main .about .intro .txtbox p{
@@ -671,7 +665,7 @@ main .timeline .time_txt{
 }
 main .timeline .time_txt .txtbox{
   border-right: none;
-  width: 400px;
+  width: 90%;
   height: 220px;
   padding: 0 20px;
 }
@@ -687,12 +681,12 @@ main .pic {
   margin-bottom: 150px;
 }
 main .pic h2{
-  font-size: 70px;
+  font-size: 65px;
   line-height: 1.4;
 }
 main .pic h3{
   margin-top: 50px;
-  font-size: 20px;
+  font-size: 25px;
 }
 main .pic .picbox ul li{
   margin-top: 200px;
@@ -710,7 +704,7 @@ main .skills h2{
   font-size: 60px;
 }
 main .skills .skill_inner{
-  width: 500px;
+  width: 90%;
   margin-top: 30px;
   gap: 10px;
   justify-content: left;
@@ -748,7 +742,7 @@ main .project .pro1{
   perspective: 900px;
 }
 main .project .pro1 .p_item{
-  width: 450px;
+  width: 100%;
   padding: 10px 20px;
 }
 main .project .pro1 .p_item h2{
@@ -768,9 +762,13 @@ main .project .pro1 .p_item .ptxt{
   transform: translateX(-50%);
 }
 main .project .pro1 .pro1_btn ul{
-  /* margin-top: 50px; */
+  margin: auto;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  width: 330px;
+}
+main .project .pro1 .pro1_btn ul li a{
+  font-size: 14px;
 }
 
 
@@ -779,9 +777,11 @@ main .project .pro2{
   margin-top: 150px;
 }
 main .project .pro2 .pro2_txt{
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 270px;
   text-align: center;
+  margin-bottom: 30px;
 }
 main .project .pro2 .pro2_txt h2{
   font-size: 70px;
@@ -799,7 +799,7 @@ main .project .pro2 .pro2_img{
 main .project .pro3{
   flex-direction: column;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 main .project .pro3 .pro3_txt{
   width: 500px;
