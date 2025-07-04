@@ -191,14 +191,27 @@ header .title .bold{
   max-width: 700px;
   margin: auto;
 }
-.pic .picbox ul li {
+/* .pic .picbox ul li {
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
+} */
+.pic .picbox ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pic .picbox ul li {
+  position: static;
+  transform: none;
 }
 .pic .picbox ul li img{
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 500px;
   border-radius: 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -802,7 +815,8 @@ main .project .pro3{
   margin-top: 50px;
 }
 main .project .pro3 .pro3_txt{
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   height: 250px;
   text-align: center;
 }
@@ -867,5 +881,13 @@ footer .f_bottom .left{
 footer .f_bottom .left h2{
   font-size: 60px;
   line-height: 1.2;
+}
+.top {
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
 }
 } 
