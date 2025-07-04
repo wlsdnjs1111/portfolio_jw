@@ -720,36 +720,39 @@ main .pic .picbox ul li img{
 } 
 
 
-main .skills{
-  max-width: 100%;
+/* main .skills{
+  width: 90%;
+  max-width: 500px;
   height: 600px;
-}
+} */
 main .skills h2{
   font-size: 60px;
 }
 main .skills .skill_inner{
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   margin-top: 30px;
   gap: 10px;
   justify-content: center;
 }
 main .skills .skill_inner .item{
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   padding: 10px;
 }
 main .skills .skill_inner .item p{
-  font-size: 12px;
+  font-size: 10px;
 }
 main .skills .skill_inner .item h3{
-  font-size: 25px;
-}
-main .skills .skill_inner .item:nth-child(9) h4{
   font-size: 20px;
 }
+main .skills .skill_inner .item:nth-child(9) h4{
+  font-size: 16px;
+}
 
-
+main .project {
+  padding: 10px;
+}
 main .project .p_txt {
   margin-bottom: 50px;
 }
@@ -782,10 +785,17 @@ main .project .pro1 .p_item .img{
 }
 main .project .pro1 .p_item .ptxt{
   width: 80%;
-  bottom: 25px;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
 }
+main .project .pro1 .p_item .ptxt h4{
+  font-size: 14px;
+}
+main .project .pro1 .p_item .ptxt span{
+  font-size: 12px;
+}
+
 main .project .pro1 .pro1_btn ul{
   margin: auto;
   justify-content: center;
@@ -801,6 +811,7 @@ main .project .pro2{
   max-width: 100%;
   flex-direction: column;
   margin-top: 150px;
+  padding: 0;
 }
 main .project .pro2 .pro2_txt{
   width: 100%;
@@ -810,11 +821,11 @@ main .project .pro2 .pro2_txt{
   margin-bottom: 30px;
 }
 main .project .pro2 .pro2_txt h2{
-  font-size: 55px;
+  font-size: 50px;
 }
 main .project .pro2 .pro2_txt p{
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 14px;
 }
 main .project .pro2 .pro2_img{
   max-width: 100%;
@@ -879,8 +890,8 @@ main .project .pro4 .pro4_txt p{
   font-size: 16px;
 }
 main .project .pro4 .pro4_img{
-  width: 450px;
-  height: 800px;
+  width: 300px;
+  height: 600px;
 }
 main .project .pro4 .pro4_txt a{
   margin: auto;
@@ -907,10 +918,11 @@ footer .f_bottom .left{
   width: 60%;
   max-width: 400px;
   height: 200px;
+  text-align: center;
   align-content: center;
 }
 footer .f_bottom .left h2{
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1.2;
 }
 
