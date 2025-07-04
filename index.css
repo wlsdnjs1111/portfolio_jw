@@ -191,24 +191,12 @@ header .title .bold{
   max-width: 700px;
   margin: auto;
 }
-/* .pic .picbox ul li {
+.pic .picbox ul li {
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
-} */
-.pic .picbox ul {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.pic .picbox ul li {
-  position: static;
-  transform: none;
-}
+} 
 .pic .picbox ul li img{
   width: 100%;
   max-width: 400px;
@@ -673,14 +661,20 @@ main .timeline .time_title{
 }
 main .timeline .time_txt{
   border-top: 1px solid #666;
+  display: flex;
   flex-direction: column;
-  margin-top: 1000px;
+  margin-top: 1100px;
+  max-width: 100%;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
 }
 main .timeline .time_txt .txtbox{
   border-right: none;
   width: 90%;
+  max-width: 450px;
   height: 220px;
-  padding: 0 20px;
+  padding: 10px;
 }
 main .timeline .time_txt .txtbox:nth-child(1){
   margin-top: 30px;
@@ -694,37 +688,40 @@ main .pic {
   margin-bottom: 150px;
 }
 main .pic h2{
-  font-size: 65px;
+  font-size: 60px;
   line-height: 1.4;
 }
 main .pic h3{
   margin-top: 50px;
-  font-size: 25px;
+  font-size: 20px;
 }
 main .pic .picbox ul li{
   margin-top: 200px;
 }
 main .pic .picbox ul li img{
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   height: 400px;
-}
+} 
 
 
 main .skills{
-  height: 700px;
+  max-width: 100%;
+  height: 600px;
 }
 main .skills h2{
   font-size: 60px;
 }
 main .skills .skill_inner{
   width: 90%;
+  max-width: 450px;
   margin-top: 30px;
   gap: 10px;
-  justify-content: left;
+  justify-content: center;
 }
 main .skills .skill_inner .item{
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   padding: 10px;
 }
 main .skills .skill_inner .item p{
@@ -786,25 +783,26 @@ main .project .pro1 .pro1_btn ul li a{
 
 
 main .project .pro2{
+  max-width: 100%;
   flex-direction: column;
   margin-top: 150px;
 }
 main .project .pro2 .pro2_txt{
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   height: 270px;
   text-align: center;
   margin-bottom: 30px;
 }
 main .project .pro2 .pro2_txt h2{
-  font-size: 70px;
+  font-size: 55px;
 }
 main .project .pro2 .pro2_txt p{
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 16px;
 }
 main .project .pro2 .pro2_img{
-  width: 450px;
+  max-width: 100%;
   height: 350px;
 }
 
@@ -821,11 +819,12 @@ main .project .pro3 .pro3_txt{
   text-align: center;
 }
 main .project .pro3 .pro3_txt h2{
-  font-size: 90px;
+  font-size: 70px;
+  margin-bottom: 10px;
 }
 main .project .pro3 .pro3_txt p{
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 16px;
 }
 main .project .pro3 .pro3_txt a{
   left: 50%;
@@ -836,6 +835,13 @@ main .project .pro3 .pro3_img{
   order: 2;
   height: 600px;
 }
+main .project .pro3 .pro3_txt a{
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+  width: 200px;
+  font-size: 14px;
+}
 
 
 main .project .pro4{
@@ -844,20 +850,29 @@ main .project .pro4{
   /* margin-top: 100px; */
 }
 main .project .pro4 .pro4_txt{
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   height: 250px;
   text-align: center;
 }
 main .project .pro4 .pro4_txt h2{
-  font-size: 90px;
+    font-size: 70px;
+  margin-bottom: 10px;
 }
 main .project .pro4 .pro4_txt p{
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 16px;
 }
 main .project .pro4 .pro4_img{
   width: 450px;
   height: 800px;
+}
+main .project .pro4 .pro4_txt a{
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+  width: 200px;
+  font-size: 14px;
 }
 
 
@@ -874,14 +889,16 @@ footer .f_bottom{
   margin-top: 50px;
 }
 footer .f_bottom .left{
-  width: 400px;
+  width: 60%;
+  max-width: 400px;
   height: 200px;
   align-content: center;
 }
 footer .f_bottom .left h2{
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1.2;
 }
+
 .top {
   right: 10px;
   bottom: 10px;
