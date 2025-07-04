@@ -597,7 +597,9 @@ footer .f_bottom .right span{
   line-height: 50px;
 }
 
-@media screen and (max-width:767px) {
+
+
+@media screen and (max-width:540px) {
 #wrap{
   width: 100%;
 }
@@ -607,6 +609,9 @@ header{
 }
 header nav{
   display: none;
+}
+header .title h1{
+  font-size: 100px;
 }
 header .title .bold{
   font-size: 150px;
@@ -666,14 +671,15 @@ main .pic {
   margin-bottom: 150px;
 }
 main .pic h2{
-  font-size: 80px;
+  font-size: 70px;
+  line-height: 1.4;
 }
 main .pic h3{
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 20px;
 }
 main .pic .picbox ul li{
-  margin-top: 230px;
+  margin-top: 200px;
 }
 
 
@@ -684,12 +690,14 @@ main .skills h2{
   font-size: 60px;
 }
 main .skills .skill_inner{
-  width: 90%;
+  width: 500px;
   margin-top: 30px;
+  gap: 10px;
+  justify-content: left;
 }
 main .skills .skill_inner .item{
-  width: 25%;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   padding: 10px;
 }
 main .skills .skill_inner .item p{
@@ -841,6 +849,5 @@ footer .f_bottom .left h2{
   font-size: 60px;
   line-height: 1.2;
 }
+} 
 
-
-  } 

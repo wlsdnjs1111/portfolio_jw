@@ -78,7 +78,6 @@ $(function(){
   });
 
 //pro2,3,4
- // pro2 애니메이션은 항상 실행 (기존 방식 유지)
 gsap.timeline({
   scrollTrigger: {
     trigger: '.pro2',
@@ -91,7 +90,6 @@ gsap.timeline({
 .to('.project .pro2', { y: '-100px', duration: 1, ease: 'none' }, 0.2);
 
 
-// pro3, pro4는 데스크탑에서만 실행
 ScrollTrigger.matchMedia({
   "(min-width: 1024px)": function () {
 
