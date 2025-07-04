@@ -18,6 +18,8 @@ $(function(){
   });
   
   //어바웃미
+  ScrollTrigger.matchMedia({
+  "(min-width: 1024px)": function () {
   gsap.timeline({
     scrollTrigger:{
     trigger:'.about',
@@ -31,8 +33,6 @@ $(function(){
 
 
   //타임라인
-ScrollTrigger.matchMedia({
-  "(min-width: 1024px)": function () {
   gsap.timeline({
     scrollTrigger:{
     trigger:'.timeline',
