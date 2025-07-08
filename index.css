@@ -624,11 +624,9 @@ footer .f_bottom .right span{
 
 
 @media screen and (max-width:540px) {
-body{
-  overflow-x: hidden;
-}
   #wrap{
   width: 100%;
+  overflow-x: hidden;
 }
 
 header{
@@ -783,9 +781,9 @@ main .project .p_txt h3{
 main .project .p_txt p{
   font-size: 16px;
 }
-main .project .pro1{
+/* main .project .pro1{
   perspective: 900px;
-}
+} */
 main .project .pro1 .p_item{
   width: 100%;
   padding: 10px 20px;
