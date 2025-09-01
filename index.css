@@ -623,29 +623,29 @@ footer .f_bottom .right span{
 
 
 
-@media screen and (max-width:540px) {
+@media screen and (max-width: 500px) {
   #wrap{
   width: 100%;
   overflow-x: hidden;
 }
-
-header{
-  height: 900px;
+#top{
+  height: 100vh;
+  padding : 0 20px;
 }
 header nav{
-  display: none;
+  display: none; 
 }
 header .title h1{
-  font-size: 90px;
+  font-size: 6vw;
 }
 header .title .bold{
   font-size: 150px;
 }
-main .about{
-}
+
 main .about h2{
   font-size: 60px;
   line-height: 1;
+  color : #444;
 }
 main .about .intro{
   margin-top: 0;
@@ -743,6 +743,7 @@ background-color: pink;
 }  */
 main .skills h2{
   font-size: 60px;
+  color : #444444;
 }
 main .skills .skill_inner{
   width: 90%;
