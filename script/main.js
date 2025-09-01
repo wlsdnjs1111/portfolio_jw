@@ -1,4 +1,45 @@
 $(document).ready(function () {
+  //햄버거버튼
+    const $btn  = $('#hwrap .hamburger');
+  const $menu = $('#hwrap header .h_bottom nav ul');
+  const $form = $('#hwrap header .h_bottom .search form');
+  const mq1600 = window.matchMedia('(max-width:1599px)');
+
+  function openMenu() {
+    $menu.addClass('active').attr('aria-hidden', 'false');
+    $btn.attr('aria-expanded', 'true');
+    $('body').addClass('no-scroll');
+  }
+  function closeMenu() {
+    $menu.removeClass('active').attr('aria-hidden', 'true');
+    $btn.attr('aria-expanded', 'false');
+    $('body').removeClass('no-scroll');
+  }
+
+  $btn.on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $menu.hasClass('active') ? closeMenu() : openMenu();
+  });
+
+  // 헤더 영역 밖 클릭 시 닫기
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('#hwrap header .h_bottom').length) closeMenu();
+  });
+
+  // 검색폼 클릭은 전파 막기
+  $form.on('click', function (e) { e.stopPropagation(); });
+
+  // ESC로 닫기
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // 데스크톱 해상도로 복귀하면 초기화
+  $(window).on('resize', function () {
+    if (!mq1600.matches) closeMenu();
+  });
+
   //메인슬라이드
     let slideCount = $('.slidebox ul li').length; //슬라이드개수
     let slideWidth = $(window).width(); //픽셀단위로 변환

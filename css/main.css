@@ -58,7 +58,7 @@ height: 180px;
 position: absolute;
 top: 0;
 left: 0;
-z-index: 10;
+z-index: 1100;
 }
 header .h_top{
 width: 100%;
@@ -100,7 +100,7 @@ border: none;
 outline: none;
 padding: 0 30px;
 font-size: 16px;
-width: 470px;
+max-width: 470px;
 }
 
 header .h_bottom .search button {
@@ -158,6 +158,17 @@ transition: 0.3s ease;
 }
 header .h_bottom nav ul li:hover{
 transform: translateY(-5px);
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1200;
 }
 
 
@@ -328,7 +339,7 @@ right: 1%;
 }
 
 
-#sec01 .inside{
+/*#sec01 .inside{
 height: 100vh;
 padding: 20px 40px 10px 100px;
 position: relative;
@@ -344,14 +355,12 @@ width: 1300px;
 height: fit-content;
 position: relative;
 overflow: hidden;
-/* background-color: #aed9e0;  */
 }
 .inside .inside_inner .inswipe{
 width: calc(370px * 9);
 margin: 0 auto;
 display: flex;
 transition: transform 0.4s ease;
-/* background-color: yellow;  */
 }
 .inside .inside_inner .inswipe .inbox{
 text-align: center;
@@ -379,7 +388,6 @@ justify-content: center;
 align-items: center;
 gap: 30px;
 margin-top: 10px;
-/* background-color: thistle; */
 }
 .inside_inner .inswipe .inbox .inicon>button{
 display: flex;
@@ -403,7 +411,110 @@ left: 2%;
 }
 .inside .innext{
 right: 24%;
+}*/
+/* 공통 변수: 화면당 카드 수 & 간격 */
+:root {
+  --cards-per-view: 6;   /* 데스크톱 기본 6장 */
+  --card-gap: 24px;
 }
+
+/* 섹션 레이아웃 안정화 */
+#sec01 .inside{
+  min-height: 100vh;              /* 모바일에서 100vh + 주소창 이슈 방지용 */
+  padding: 20px clamp(16px, 4vw, 40px) 10px clamp(16px, 6vw, 100px);
+  position: relative;
+  background-size: cover;
+  margin-bottom: 100px;
+  overflow: hidden;                /* 내부 넘침 방지 */
+}
+
+/* 타이틀은 반응형 폰트 */
+#sec01 .inside h2{
+  text-align: right;
+  font-size: clamp(28px, 6vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+/* 컨테이너: 고정 1300px 대신 반응형 + 최대폭 유지 */
+.inside .inside_inner{
+  width: min(1300px, 100%);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 트랙: 고정 width 제거 + gap 부여 */
+.inside .inside_inner .inswipe{
+  display: flex;
+  gap: var(--card-gap);
+  transition: transform 0.4s ease;
+  width: max-content;              /* 콘텐츠 폭만큼 자연 확장 */
+}
+
+/* 카드: flex-basis를 카드 개수로 자동 계산 */
+.inside .inside_inner .inswipe .inbox{
+  text-align: center;
+  flex: 0 0 calc(
+    (100% - (var(--card-gap) * (var(--cards-per-view) - 1)))
+    / var(--cards-per-view)
+  );
+  padding: clamp(12px, 2.2vw, 30px);
+}
+
+/* 이미지: 비율 유지 + 채우기 */
+#sec01 .inside .inside_inner .inswipe .inbox a img{
+  width: 100%;
+  aspect-ratio: 1 / 1;            /* 정사각 비율 */
+  object-fit: cover;               /* 꽉 채우기 */
+  border-radius: 180px 180px 0 0;
+  margin: 0 auto 18px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.9;
+}
+#sec01 .inside .inside_inner .inswipe .inbox a img:hover{
+  transform: scale(1.06);
+  opacity: 1;
+}
+
+/* 아이콘 바 */
+.inside_inner .inswipe .inbox .inicon{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(12px, 2vw, 30px);
+  margin-top: 8px;
+}
+.inside_inner .inswipe .inbox .inicon>button{
+  display: flex;
+  gap: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 화살표 위치 & 터치 방지 */
+.inside .inarrow{
+  width: 48px; height: 48px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.inside .inpre{  left: 8px; }
+.inside .innext{ right: 8px; }
+
+.arrow.disabled, .inarrow.disabled{
+  opacity: .3;
+  pointer-events: none;
+  cursor: default;
+}
+
 
 .arrow.disabled,
 .inarrow.disabled {
@@ -1004,7 +1115,7 @@ width: 100%;
 height: 450px;
 backdrop-filter: blur(15px);
 background: rgba(255, 255, 255, 0.1);
-border: 1px solid #666;
+border-top: 1px solid #666;
 margin-top: 150px;
 }
 footer .f_inner{
@@ -1128,27 +1239,147 @@ aside>a:hover{
 } 
 
 @media screen and (max-width:1599px){
-    #sec01 .inside .inside_inner{
-        /* background-color: yellow; */
-        width: 1200px;
+.hamburger {
+    display: block;
+    color: #fff;
+    font-size: 3vw;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 9999999999;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+header .h_bottom {
+
+    border-bottom: none;
+}
+header .h_bottom .search form {
+    width: 100%;
+    max-width: 640px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #FFA500;
+    border-radius: 50px;
+    background: #fff;
+    padding: 0 8px;
+    overflow: hidden;
+  }
+.search input[type="search"]{
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    font-size: 16px;
+    flex: 1 1 auto;      /* ← 가변폭 */
+    min-width: 0;
+    max-width: none;     /* ← 잘림 방지 */
+  }
+  header .h_bottom .search button{
+    position: static;    /* ← absolute 제거 */
+    border: none;
+    background: none;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 30px;
+}
+  header .h_bottom .search button img{
+    width: 24px; height: 24px;
+}
+
+  header .h_bottom nav{
+    width: 100%;
+  }
+
+  /* 기본 닫힘 */
+  header .h_bottom nav ul{
+    display: none;                    /* ← 반드시 닫힘 */
+    position: absolute;
+    top: 100px;                       /* 로고 아래쯤 */
+    right: 16px;
+    width: 280px; 
+    height : 500px;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding : 10px;
+    z-index: 99999999;
+  }
+ 
+  header .h_bottom nav ul.active{
+    display: flex;
+  }
+
+  header .h_bottom nav ul li a{
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    height: auto;
+    line-height: 1.3;
+    font-size: 16px;                  /* 1vw 대신 고정값(작은 화면 가독성) */
+    font-weight: 700;
+    color: #444;
+    text-align: left;                 
+    text-shadow: none;                
+  }
+  /*header .h_bottom nav ul li a:hover{
+    background: rgba(255,165,0,0.12);
+  }*/
+  header .h_bottom nav ul li a > img{
+    width: 24px; height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  .h_bottom .search{
+    order: 2;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+/*#sec01 .inside .inside_inner{
+    width: 1200px;
+}
+#sec01 .inside .inside_inner .inswipe .inbox{
+flex: 0 0 12%;
+}
+#sec01 .inpre{
+left: 2%;
+}
+#sec01 .innext{
+right: 13%;
+}*/
+ #sec01{
+    --cards-per-view:7;
+    --card-gap:18px;
+    --card-pad:16px;
+  }
+#sec04 .board h2,
+#sec04 .board .b_left{
+    display: none;
+}
+#sec04 .board .b_right .tabmenu{
+    /* background-color: pink; */
+    left: 19%;
     }
-    #sec01 .inside .inside_inner .inswipe .inbox{
-    flex: 0 0 12%;
-    }
-    #sec01 .inpre{
-    left: 2%;
-    }
-    #sec01 .innext{
-    right: 13%;
-    }
-    
-    #sec04 .board h2,
-    #sec04 .board .b_left{
-        display: none;
-    }
-    #sec04 .board .b_right .tabmenu{
-        /* background-color: pink; */
-        left: 19%;
+.fbtnbox{
+    width: 80vw;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
     }
 }
 
@@ -1313,8 +1544,7 @@ aside>a:hover{
     #sec01 .next{
     right:0;
     }
-    #sec01 .inside .inside_inner{
-    /* background-color: #00D0B4; */
+   /* #sec01 .inside .inside_inner{
     margin-top: 80px;
     width: 1000px;
     }
@@ -1328,7 +1558,12 @@ aside>a:hover{
     #sec01 .innext{
     top: 70%;
     right: 4%;
-    }
+    }*/
+    #sec01{
+    --cards-per-view:8;
+    --card-gap:14px;
+    --card-pad:12px;
+  }
 
     #sec04 h2{
     font-size: 70px;
@@ -1340,5 +1575,14 @@ aside>a:hover{
         left: 8%;
     }
 } 
+
+@media screen and (max-width:500px){
+ #sec01{
+    --cards-per-view:12;
+    --card-gap:8px;
+    --card-pad:6px;
+  }
+
+}
 
 
